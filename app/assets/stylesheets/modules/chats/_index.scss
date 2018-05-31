@@ -1,0 +1,52 @@
+.main-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.main-wrapper-body {
+  width: 40%;
+  height: 80%;
+  background-color: #f5f5f5;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  padding: 20px 30px;
+}
+
+.chat-form {
+  &__input {
+    float: left;
+    margin-right: 15px;
+    & input {
+      height: 30px;
+      outline: 0;
+    }
+  }
+  &__button {
+    float: left;
+    margin-top: 1px;
+    & button {
+      height: 33px;
+      width: 60px;
+      color: white;
+      background: #008489;
+      border-color: transparent;
+      font-weight: 700;
+      border-radius: 2px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  }
+}
+
+.chat-lists {
+  margin-top: 30px;
+}
+
+.chat-item {
+  padding-bottom: 5px;
+}

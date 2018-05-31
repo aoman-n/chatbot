@@ -10,11 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180531081109) do
+ActiveRecord::Schema.define(version: 20180531091418) do
 
   create_table "dictionaries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text "response", limit: 65535, null: false
     t.text "request",  limit: 65535, null: false
+  end
+
+  create_table "histories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text     "user_input",         limit: 65535, null: false
+    t.text     "bot_response",       limit: 65535, null: false
+    t.datetime "response_timestamp",               null: false
   end
 
 end

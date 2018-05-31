@@ -14,6 +14,8 @@
 |------|----|-------|
 |user_input|text|null: false|
 |bot_response|text|null: false|
+|response_timestamp|timestamp|null: false|
+
 
 # ルーティング
 

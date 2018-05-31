@@ -1,11 +1,13 @@
 .main-wrapper
   .main-wrapper-body
-    .chat-form.clearfix
-      .chat-form__input
-        %input
-      .chat-form__button
-        %button
-          %span 送信
+    = form_for @chat, url: { controller: :chats, action: :create} do |f|
+      .chat-form.clearfix
+        / = form_for @chat do |f|
+        .chat-form__input
+          = f.text_field :user_input
+        .chat-form__button
+          %button
+            %span 送信
 
     .chat-lists
       .chat-lists-body

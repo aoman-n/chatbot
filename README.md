@@ -7,15 +7,12 @@
 |request|text|null: false|
 |response|text|null: false|
 
-
 ## historiesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |user_input|text|null: false|
 |bot_response|text|null: false|
-|response_timestamp|timestamp|null: false|
-
 
 # ルーティング
 

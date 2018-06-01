@@ -18,9 +18,10 @@ ActiveRecord::Schema.define(version: 20180531091418) do
   end
 
   create_table "histories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.text     "user_input",         limit: 65535, null: false
-    t.text     "bot_response",       limit: 65535, null: false
-    t.datetime "response_timestamp",               null: false
+    t.text     "user_input",   limit: 65535, null: false
+    t.text     "bot_response", limit: 65535, null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
 end

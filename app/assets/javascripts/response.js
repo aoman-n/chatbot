@@ -36,6 +36,7 @@ $(function(){
     })
     .fail(function(){
       alert('入力された文字を認識できません。もう一度ご入力ください。');
+      $('.text-field').val('');
       $('.send-button').prop('disabled', false);
     })
   });

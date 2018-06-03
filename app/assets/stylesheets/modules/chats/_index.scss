@@ -7,32 +7,37 @@
 .main-wrapper-body {
   width: 40%;
   height: 80%;
-  background-color: #f5f5f5;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   margin: auto;
-  padding: 20px 30px;
-  overflow: scroll;
+}
+
+.form-area {
+  height: 50px;
 }
 
 .chat-form {
+  display: inline-block;
   &__input {
     float: left;
     margin-right: 15px;
     & input {
-      height: 30px;
+      height: 40px;
+      width: 300px;
       outline: 0;
+      background: #ffffe0;
+      padding: 0 8px;
     }
   }
   &__button {
     float: left;
     margin-top: 1px;
     & button {
-      height: 33px;
-      width: 60px;
+      height: 42px;
+      width: 70px;
       color: white;
       background: #008489;
       border-color: transparent;
@@ -44,10 +49,34 @@
   }
 }
 
+.chat-form-hidden {
+  display: none;
+}
+
 .chat-lists {
-  margin-top: 30px;
+  margin-top: 10px;
+  height: calc(100% - 140px);
+  background-color: #f5f5f5;
+  overflow: scroll;
+  padding: 20px 15px;
 }
 
 .chat-item {
   padding-bottom: 5px;
+}
+
+.history-button, .input-form-back {
+  margin-top: 17px;
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px 13px;
+  height: 45px;
+  width: 150px;
+  background: #008489;
+  cursor: pointer;
+  & span {
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
+  }
 }

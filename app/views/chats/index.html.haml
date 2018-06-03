@@ -1,10 +1,13 @@
 .main-wrapper
   .main-wrapper-body
-    = form_for @chat, url: { controller: :chats, action: :create} do |f|
-      .chat-form.clearfix
-        .chat-form__input
-          = f.text_field :user_input, class: "text-field"
-        .chat-form__button
-          %button.send-button
-            %span 送信
+    .form-area
+      = form_for @chat, url: { controller: :chats, action: :create}, html: { class: 'form'} do |f|
+        .chat-form.clearfix
+          .chat-form__input
+            = f.text_field :user_input, class: "text-field"
+          .chat-form__button
+            %button.send-button
+              %span 送信
     .chat-lists
+    %button.history-button
+      %span 履歴を表示する

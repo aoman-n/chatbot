@@ -1,5 +1,7 @@
 .main-wrapper
   .main-wrapper-body
+    .history-title.history-title-hidden
+      最新のコメント順に10件表示しています。
     .form-area
       = form_for @chat, url: { controller: :chats, action: :create }, html: { class: 'form' } do |f|
         .chat-form.clearfix

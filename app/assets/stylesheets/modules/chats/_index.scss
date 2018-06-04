@@ -15,6 +15,15 @@
   margin: auto;
 }
 
+.history-title {
+  font-size: 20px;
+  color: #a9a9a9;
+}
+
+.chat-form-hidden, .history-title-hidden {
+  display: none;
+}
+
 .form-area {
   height: 50px;
 }
@@ -49,10 +58,6 @@
   }
 }
 
-.chat-form-hidden {
-  display: none;
-}
-
 .chat-lists {
   margin-top: 10px;
   height: calc(100% - 140px);
@@ -63,6 +68,13 @@
 
 .chat-item {
   padding-bottom: 5px;
+}
+
+.loading {
+  padding-left: 5px;
+  & img {
+    height: 8px;
+  }
 }
 
 .history-button, .input-form-back {

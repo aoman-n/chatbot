@@ -11,6 +11,7 @@ class ChatsController < ApplicationController
 
   def create
     @user_input = params[:history][:user_input]
+    return if @user_input.empty?
 
     case @user_input
     when "今何時？", "今何時ですか？"

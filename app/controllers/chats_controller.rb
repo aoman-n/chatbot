@@ -11,7 +11,7 @@ class ChatsController < ApplicationController
   def create
     @user_input = params[:history][:user_input]
     if @user_input == "今何時？"
-      @bot_response = Time.now.strftime("%H時%M分です。")
+      @bot_response = Time.now.to_s(:time) + "です。"
     elsif city = @user_input.match(/今日の(.+)の天気は？/)
       city = city[1]
       weather_api(city)
@@ -19,6 +19,19 @@ class ChatsController < ApplicationController
     else
       search_response
     end
+
+    # case @user_input
+    # when "今何時？"
+    #   @bot_response = Time.now.to_s(:time) + "です。"
+    # when /今日の(.+)の天気は？/
+    #   city = @user_input.match(/今日の(.+)の天気は？/)
+    #   city = city[1]
+    #   weather_api(city)
+    #   @bot_response = "#{I18n.t @weather}" + "です。"
+    # else
+    #   search_response
+    # end
+
     @history = History.create(user_input: @user_input, bot_response: @bot_response)
   end
 
@@ -39,12 +52,11 @@ class ChatsController < ApplicationController
   end
 
   def search_response
-    @bot_response = Dictionary.find_by( request: @user_input)
+    @bot_response = Dictionary.find_by(request: @user_input)
     if @bot_response.nil?
       random_response
     else
       @bot_response = @bot_response.response
     end
   end
-
 end

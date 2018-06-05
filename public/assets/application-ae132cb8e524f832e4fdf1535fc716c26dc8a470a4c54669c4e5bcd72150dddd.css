@@ -1,0 +1,275 @@
+/*!
+ * YUI 3.5.0 - reset.css (http://developer.yahoo.com/yui/3/cssreset/)
+ * http://cssreset.com
+ * Copyright 2012 Yahoo! Inc. All rights reserved.
+ * http://yuilibrary.com/license/
+ */
+/*
+    TODO will need to remove settings on HTML since we can't namespace it.
+    TODO with the prefix, should I group by selector or property for weight savings?
+*/
+/* line 11, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/config/_reset.scss */
+html {
+  color: #000;
+  background: #FFF;
+}
+
+/*
+    TODO remove settings on BODY since we can't namespace it.
+*/
+/*
+    TODO test putting a class on HEAD.
+        - Fails on FF.
+*/
+/* line 22, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/config/_reset.scss */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 50, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/config/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 54, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/config/_reset.scss */
+fieldset,
+img {
+  border: 0;
+}
+
+/*
+    TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...
+*/
+/* line 61, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/config/_reset.scss */
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* line 74, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/config/_reset.scss */
+ol,
+ul {
+  list-style: none;
+}
+
+/* line 79, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/config/_reset.scss */
+caption,
+th {
+  text-align: left;
+}
+
+/* line 83, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/config/_reset.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+/* line 92, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/config/_reset.scss */
+q:before,
+q:after {
+  content: '';
+}
+
+/* line 96, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/config/_reset.scss */
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+/* to preserve line-height and selector appearance */
+/* line 102, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/config/_reset.scss */
+sup {
+  vertical-align: text-top;
+}
+
+/* line 105, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/config/_reset.scss */
+sub {
+  vertical-align: text-bottom;
+}
+
+/* line 108, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/config/_reset.scss */
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*to enable resizing for IE*/
+/* line 116, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/config/_reset.scss */
+input,
+textarea,
+select {
+  *font-size: 100%;
+}
+
+/*because legend doesn't inherit in IE */
+/* line 122, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/config/_reset.scss */
+legend {
+  color: #000;
+}
+
+/* YUI CSS Detection Stamp */
+/* line 126, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/config/_reset.scss */
+#yui3-css-stamp.cssreset {
+  display: none;
+}
+
+/* line 2, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/mixin/_mixin.scss */
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* line 1, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/modules/chats/_index.scss */
+.main-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+/* line 7, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/modules/chats/_index.scss */
+.main-wrapper-body {
+  width: 40%;
+  height: 80%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+/* line 18, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/modules/chats/_index.scss */
+.history-title {
+  font-size: 20px;
+  color: #a9a9a9;
+}
+
+/* line 23, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/modules/chats/_index.scss */
+.chat-form-hidden, .history-title-hidden {
+  display: none;
+}
+
+/* line 27, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/modules/chats/_index.scss */
+.form-area {
+  height: 50px;
+}
+
+/* line 31, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/modules/chats/_index.scss */
+.chat-form {
+  display: inline-block;
+}
+/* line 33, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/modules/chats/_index.scss */
+.chat-form__input {
+  float: left;
+  margin-right: 15px;
+}
+/* line 36, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/modules/chats/_index.scss */
+.chat-form__input input {
+  height: 40px;
+  width: 300px;
+  outline: 0;
+  background: #ffffe0;
+  padding: 0 8px;
+}
+/* line 44, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/modules/chats/_index.scss */
+.chat-form__button {
+  float: left;
+  margin-top: 1px;
+}
+/* line 47, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/modules/chats/_index.scss */
+.chat-form__button button {
+  height: 42px;
+  width: 70px;
+  color: white;
+  background: #008489;
+  border-color: transparent;
+  font-weight: 700;
+  border-radius: 2px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* line 61, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/modules/chats/_index.scss */
+.chat-lists {
+  margin-top: 10px;
+  height: calc(100% - 140px);
+  background-color: #f5f5f5;
+  overflow: scroll;
+  padding: 20px 15px;
+}
+
+/* line 69, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/modules/chats/_index.scss */
+.chat-item {
+  padding-bottom: 5px;
+}
+
+/* line 73, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/modules/chats/_index.scss */
+.loading {
+  padding-left: 5px;
+}
+/* line 75, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/modules/chats/_index.scss */
+.loading img {
+  height: 8px;
+}
+
+/* line 80, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/modules/chats/_index.scss */
+.history-button, .input-form-back {
+  margin-top: 17px;
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px 13px;
+  height: 45px;
+  width: 150px;
+  background: #008489;
+  cursor: pointer;
+}
+/* line 89, /Users/hiroaki/projects/chatbot/app/assets/stylesheets/modules/chats/_index.scss */
+.history-button span, .input-form-back span {
+  font-weight: bold;
+  color: white;
+  font-size: 15px;
+}

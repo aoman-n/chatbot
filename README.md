@@ -1,3 +1,7 @@
+# システム構成図
+
+![システム構成図](https://github.com/laster18/chatbot/blob/master/app/assets/images/chatbot_system.png)
+
 # DB設計
 
 ## dictionariesテーブル

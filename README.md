@@ -22,7 +22,7 @@
 
 - GET root => 'chats#index'
 - POST /chat => 'chats#create'
-- GET /history => 'histories#index'
+- GET /history/list => 'histories#index'
 
 # コントローラー
 

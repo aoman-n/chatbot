@@ -1,5 +1,8 @@
 module BotResponse
   extend ActiveSupport::Concern
+  require 'json'
+  require 'uri'
+  require 'net/http'
 
   def random_response
     random_response = ["何を言われたのかわかりません。",

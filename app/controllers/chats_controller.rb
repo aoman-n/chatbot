@@ -1,9 +1,6 @@
 class ChatsController < ApplicationController
   include CityRename
   include BotResponse
-  require 'json'
-  require 'uri'
-  require 'net/http'
 
   def index
     @chat = History.new

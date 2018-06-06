@@ -1,3 +1,5 @@
-# coding: utf-8
+require "csv"
 
-Dictionary.create(response: 'こんにちは。', request: 'こんにちは')
+CSV.foreach('db/dictionaries.csv') do |row|
+  Dictionary.create(request: row[0], response: row[1])
+end

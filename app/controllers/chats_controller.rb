@@ -16,8 +16,8 @@ class ChatsController < ApplicationController
     when /今日の(.+)の天気は？/
       city = @user_input.match(/今日の(.+)の天気は？/)
       city = city[1]
-      weather_api(city)
-      @bot_response = "#{I18n.t @weather}" + "です。"
+      weather = weather_api(city)
+      @bot_response = "#{I18n.t weather}" + "です。"
     else
       search_response
     end

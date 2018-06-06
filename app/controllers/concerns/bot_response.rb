@@ -18,7 +18,7 @@ module BotResponse
     uri = URI.parse(api_url)
     json = Net::HTTP.get(uri)
     result = JSON.parse(json)
-    @weather = result["weather"][0]["main"]
+    result["weather"][0]["main"]
   end
 
   def search_response

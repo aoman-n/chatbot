@@ -1,0 +1,8 @@
+%p [
+- @histories.each do |history|
+  %p {
+  %p "user_input": "#{history.user_input}",
+  %p "bot_response": "#{history.bot_response}",
+  %p "response_timestamp": "#{history.created_time}"
+  %p }
+%p ]

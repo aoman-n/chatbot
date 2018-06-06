@@ -57,7 +57,7 @@ $(function() {
     })
     .done(function(data) {
       appendRequest(data);
-      setTimeout(function(){
+      setTimeout(function() {
         appendResponse(data);
       }, 1000);
       $('.text-field').val('');

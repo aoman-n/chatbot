@@ -62,6 +62,7 @@ $(function() {
       }, 1000);
       $('.text-field').val('');
       $('.sent-bottun').prop('disabled', false);
+      $('.chat-lists').animate({scrollTop: $('.chat-lists')[0].scrollHeight}, 'fast');
     })
     .fail(function() {
       alert('入力された文字を認識できません。もう一度ご入力ください。');

@@ -1,18 +1,33 @@
-.main-wrapper {
+.content {
   width: 100vw;
   height: 100vh;
   position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #000;
+  margin: 50px 16vw;
 }
 
-.main-wrapper-body {
+.info-wrapper {
+  width: 18%;
+  min-width: 200px;
+  border: 1px solid #dce0e0;
+  float: left;
+  margin: 60px 30px 30px 0;
+  &__title {
+    padding-bottom: 7px;
+  }
+}
+
+.info-wrapper-body {
+  padding: 18px;
+}
+
+.main-wrapper {
   width: 40%;
+  min-width: 500px;
   height: 80%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
+  float: left;
 }
 
 .history-title {

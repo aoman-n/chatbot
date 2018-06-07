@@ -1,0 +1,12 @@
+.dictionaries-list-wrapper
+  = link_to '>チャットボット画面へ戻る', root_path, class:'d-main-back-link'
+  %table.dictionaries-list
+    %tr
+      %th ユーザーの入力
+      %th ボットのレスポンス
+    - @dictionaries.each do |dictionary|
+      %tr
+        %td
+          = dictionary.request
+        %td
+          = dictionary.response

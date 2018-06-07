@@ -1,0 +1,24 @@
+.d-content
+  .d-main-wrapper
+    .d-main-wrapper-body
+      .d-main-wrapper__title
+        チャットボットを育てましょう！
+      = form_for @dictionary, remote: true, html: { class: 'dictionary-form' } do |f|
+        .user-input
+          .user-input__info
+            ユーザーが入力する言葉
+          .user-input__input
+            = f.text_field :request, class: 'create-text-input'
+        .bot-response
+          .bot-response__info
+            チャットボットが返す言葉
+          .bot-response__input
+            = f.text_field :response, class: 'create-text-input'
+        .dictionary-create-button
+          %button.create-button
+            %span 覚えさせる
+
+      .create-list.create-list-hidden
+        .create-list__title
+          覚えさせた言葉
+        .create-list-item

@@ -8,7 +8,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|request|text|null: false|
+|request|text|null: false, unique: true|
 |response|text|null: false|
 
 ## historiesテーブル

@@ -40,6 +40,13 @@
   &__title {
     padding-bottom: 7px;
   }
+  &__dictionaries-link {
+    padding-top: 8px;
+    font-size: 18px;
+    & a {
+      color: #B22222;
+    }
+  }
 }
 
 .info-wrapper-body {

@@ -1,0 +1,80 @@
+.d-main-wrapper {
+  width: 37vw;
+  background-color: #f5f5f5;
+  height: 72vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  &__title {
+    font-size: 22px;
+    padding-bottom: 20px;
+  }
+}
+
+.d-main-wrapper-body {
+  padding: 30px;
+}
+
+.d-main-back-link {
+  color: #1a1a1a;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 8px;
+  display: inline-block;
+  &:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+}
+
+.dictionary-form {
+  padding: 20px 0;
+}
+
+.user-input, .bot-response {
+  &__info {
+    padding-bottom: 8px;
+  }
+  &__input {
+    display: inline-block;
+    margin-bottom: 15px;
+    & input {
+      height: 33px;
+      width: 260px;
+      outline: 0;
+      border: 1px solid #c0c0c0;
+      padding: 0 8px;
+      &:focus {
+        border: 1px solid #008489;
+      }
+    }
+  }
+}
+
+.dictionary-create-button {
+  margin: 14px 0;
+  & button {
+    padding: 8px 17px;
+    background-color: #008489;
+    border-radius: 2px;
+    & span {
+      font-size: 14px;
+      color: white;
+      font-weight: bold;
+    }
+  }
+}
+
+.create-list {
+  &__title {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+}
+
+.create-list-hidden {
+  display: none;
+}

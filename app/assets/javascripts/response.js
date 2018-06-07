@@ -41,7 +41,7 @@ $(function() {
     return hour + ":" + min + ":" + sec;
   }
 
-  $('#new_history').on('submit', function(e) {
+  $(document).on('submit', '#new_history', function(e) {
     e.preventDefault();
     requestTime = timeCreate();
     var userInput = $('.text-field').val();

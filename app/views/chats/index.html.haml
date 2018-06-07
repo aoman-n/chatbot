@@ -1,18 +1,24 @@
 .content
-  .info-wrapper
-    .info-wrapper-body
-      .info-wrapper__title
-        対応文言
-      %ul.info-wrapper__item
-        %li 「こんにちは」
-        %li 「こんばんは」
-        %li 「おやすみ」
-        %li 「今何時？」
-        %li 「今日の○○の天気は？」
-        %li 「もうかりまっか？」
-        %li 「はじめまして」
-        %li 「元気？」
-        %li 「さようなら」 ...
+  .left-container
+    .chatbot-raise-button
+      = link_to 'チャットボットに覚えさせる', dictionaries_path
+    .info-wrapper
+      .info-wrapper-body
+        .info-wrapper__title
+          対応文言
+        %ul.info-wrapper__item
+          %li 「こんにちは」
+          %li 「こんばんは」
+          %li 「おやすみ」
+          %li 「今何時？」
+          %li 「今日の○○の天気は？」
+          %li 「もうかりまっか？」
+          %li 「はじめまして」
+          %li 「元気？」
+          %li 「さようなら」 ...
+        .info-wrapper__dictionaries-link
+          %a{href: dictionaries_list_path}
+            >リストを見る
   .main-wrapper
     .history-title.history-title-hidden
       最新のコメント順に10件表示しています。

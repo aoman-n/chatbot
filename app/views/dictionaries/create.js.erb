@@ -1,0 +1,4 @@
+$('.create-list').append("<%= escape_javascript(render 'create') %>")
+$('.create-list').removeClass('create-list-hidden');
+$('.create-text-input').val('');
+$('.create-button').prop('disabled', false);

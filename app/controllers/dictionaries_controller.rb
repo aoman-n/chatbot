@@ -8,6 +8,10 @@ class DictionariesController < ApplicationController
     redirect_to action: :index unless @dictionary.save
   end
 
+  def list
+    @dictionaries = Dictionary.all
+  end
+
   private
   def dictionary_params
     params.require(:dictionary).permit(:request, :response)

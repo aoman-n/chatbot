@@ -4,6 +4,12 @@
       = link_to '>チャットボット画面へ戻る', root_path, class:'d-main-back-link'
       .d-main-wrapper__title
         チャットボットを育てましょう！
+      / - if @dictionary.errors.any?
+      /   #error_explanation.alert.alert-danger
+      /     %ul
+      /       - @dictionary.errors.full_messages.each do |message|
+      /         %li
+      /           = message
       = form_for @dictionary, remote: true, html: { class: 'dictionary-form' } do |f|
         .user-input
           .user-input__info

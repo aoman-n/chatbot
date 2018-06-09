@@ -70,6 +70,8 @@
 }
 
 .create-list {
+  overflow: scroll;
+  height: 140px;
   &__title {
     font-size: 18px;
     margin-bottom: 6px;

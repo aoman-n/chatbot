@@ -5,11 +5,17 @@ class DictionariesController < ApplicationController
 
   def create
     @dictionary = Dictionary.new(dictionary_params)
-    redirect_to action: :index unless @dictionary.save
+    render :index unless @dictionary.save
   end
 
   def list
     @dictionaries = Dictionary.all
+  end
+
+  def destroy
+    @dictionary = Dictionary.find(params[:id])
+    @dictionary.destroy
+    render json: { status: 'success' }
   end
 
   private

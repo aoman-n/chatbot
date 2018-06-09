@@ -60,6 +60,7 @@
     padding: 8px 17px;
     background-color: #008489;
     border-radius: 2px;
+    outline: none;
     & span {
       font-size: 14px;
       color: white;
@@ -69,6 +70,8 @@
 }
 
 .create-list {
+  overflow: scroll;
+  height: 140px;
   &__title {
     font-size: 18px;
     margin-bottom: 6px;

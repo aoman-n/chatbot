@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   post '/chat'              => 'chats#create'
   get  '/history/list'      => 'histories#index'
   get  '/dictionaries/list' => 'dictionaries#list'
-  resources :dictionaries, only: [:index, :create]
+  resources :dictionaries, only: [:index, :create, :destroy]
 
 end

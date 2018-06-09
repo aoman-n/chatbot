@@ -4,9 +4,20 @@
     %tr
       %th ユーザーの入力
       %th ボットのレスポンス
+      %th
+    %tr
+      %td 今何時？
+      %td ◯◯時◯◯分です。
+      %td
+    %tr
+      %td 今日の◯◯の天気は？
+      %td ◯◯です。
+      %td
     - @dictionaries.each do |dictionary|
       %tr
         %td
           = dictionary.request
         %td
           = dictionary.response
+        %td
+          = link_to '削除', dictionary_path(dictionary), remote: true, method: :delete, class: 'delete-link'
